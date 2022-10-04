@@ -6,21 +6,32 @@
 int main(int argc, char *argv[]) {
 	
 
-	int x, i, sum;
-	
-	sum = 0;
-	
-	printf("input a number:");
-	scanf("%d", &x);
-	
-	for (i = 0 ; i <= x ; i++)
-	{
-		sum += i;
-	}
-	
-	printf("The result is : %d", sum);
+	int x, y; 
+	char a;   //연산자 문자  
+	int result;
 	
 	
+	printf("enter the calculation: ");
+	scanf("%d %c %d", &x, &a, &y);
+	
+	if (a =='+')
+		result = x + y;
+		
+	else if (a =='-')
+		result = x - y;
+		
+	else if (a =='*')
+		result = x * y;
+		
+	else if (a =='/')
+		result = x / y;
+	
+	
+	
+	printf("=%i\n", result);
+	
+	
+
 	
 	return 0;
 }

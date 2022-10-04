@@ -5,33 +5,33 @@
 
 int main(int argc, char *argv[]) {
 	
+	
+	int x, i=0, answer=59;
+	
+	do
+	{
+	printf("Guess a number: ");
+	scanf("%d", &x);
+	
+	
+ 	if (x > answer)
+	{
+		i++;
+		printf("high! \n");
+	}
+			
+	else if (x < answer)
+	{	
+		i++;
+		printf("low! \n");
+	}
 
-	int x, y; 
-	char a;   //연산자 문자  
-	int result;
-	
-	
-	printf("enter the calculation: ");
-	scanf("%d %c %d", &x, &a, &y);
-	
-	if (a =='+')
-		result = x + y;
 		
-	else if (a =='-')
-		result = x - y;
-		
-	else if (a =='*')
-		result = x * y;
-		
-	else if (a =='/')
-		result = x / y;
+	}
+	while (x != answer);
 	
-	
-	
-	printf("=%i\n", result);
-	
-	
-
+	i++;
+	printf("Congratulation! trials : %d", i);
 	
 	return 0;
 }
